@@ -276,6 +276,6 @@ def faceRecoModel(input_shape):
     X = Lambda(lambda  x: K.l2_normalize(x,axis=1))(X)
 
     # Create model instance
-
+    print(X,Y)
     model = Model(inputs = X_input, outputs = X, name='FaceRecoModel')
     return model
